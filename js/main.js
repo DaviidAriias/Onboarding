@@ -89,7 +89,7 @@ $(window).on("load", function() {
         on: {
             reachEnd: () => {
                 (SwiperIOS).autoplay.stop();
-                $('.play-btn').css('opacity','9')
+                $('.play-ios').css('opacity','9')
             }
         }
     });
@@ -112,7 +112,7 @@ $(window).on("load", function() {
         on: {
             reachEnd: () => {
                 (SwiperAndroid).autoplay.stop();
-                $('.play-btn').css('opacity','9')
+                $('.play-android').css('opacity','9')
             }
         }
     });
