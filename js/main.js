@@ -86,22 +86,30 @@ $( document ).ready(function() {
         }
     });
 
-    var SwiperiFrames = new Swiper('.swiper-container-iframes');
     
-    function swiperPhone(){
-        var SwiperiFrames = new Swiper('.swiper-container-iframes', {
-            effect: 'fade',
-            spaceBetween: 30,
-            centeredSlides: true,
-            followFinger: true,
-            speed: 800,
-            autoplay: {
-                delay: 1000,
-                disableOnInteraction: false,
-            },
-        });
-    }
-    setTimeout(swiperPhone(), 5000);
+    var SwiperiFrames = new Swiper('.swiper-container-iframes', {
+        effect: 'fade',
+        loop: true,
+        spaceBetween: 30,
+        followFinger: true,
+        speed: 500,
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        },
+        on: {
+            reachEnd: () => {
+                SwiperiFrames.autoplay.stop();
+                $('.play-btn').css('opacity','9')
+            }
+        }
+    });
+    
+    $('.play-btn').click(function(){
+        SwiperiFrames.autoplay.start();
+        $('.play-btn').css('opacity','0');
+    });
+
 });
 
 $( window ).resize(function() {
