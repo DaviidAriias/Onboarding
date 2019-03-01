@@ -6,32 +6,12 @@ function DetectMobile(){
         $('.render-iPhone').show();
         $('.render-android').hide();
         $('.alert-iPhone').show();
-
-        $('.on-boarding-modal-Android').css('visibility','hidden');
-
-        $('.btn-home').click(function(){
-            //console.log('Click');
-            $('.on-boarding-modal-iPhone').css('visibility','visible');
-        });
-        $('.close_modal').click(function(){
-            $('.on-boarding-modal-iPhone').css('visibility','hidden');
-        });
     }
     else if (Android){
         //console.log('Android');
         $('.render-iPhone').hide();
         $('.render-android').show();
         $('.alert-iPhone').hide();
-
-        $('.on-boarding-modal-iPhone').css('visibility','hidden');
-
-        $('.btn-home').click(function(){
-            //console.log('Click');
-            $('.on-boarding-modal-Android').css('visibility','visible');
-        });
-        $('.close_modal').click(function(){
-            $('.on-boarding-modal-Android').css('visibility','hidden');
-        });
     }
 
 }
@@ -63,31 +43,8 @@ $( document ).ready(function() {
 
     DetectMobile();
     detetcOrientation();
-    //calcHeight();
-    var SwiperiPhone = new Swiper('.swiper-container-iPhone', {
-        effect: 'slide',
-        parallax: true,
-        followFinger: true,
-        speed: 1000,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
-    });
-
-    var SwiperAppInterna = new Swiper('.swiper-on-boarding-int', {
-        effect: 'slide',
-        parallax: true,
-        followFinger: true,
-        speed: 1,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
-    });
-
     
-    var SwiperiFrames = new Swiper('.swiper-container-iframes', {
+    var SwiperIOS = new Swiper('.swp-IOS', {
         effect: 'fade',
         loop: true,
         spaceBetween: 30,
@@ -99,14 +56,37 @@ $( document ).ready(function() {
         },
         on: {
             reachEnd: () => {
-                SwiperiFrames.autoplay.stop();
+                (SwiperIOS).autoplay.stop();
                 $('.play-btn').css('opacity','9')
             }
         }
     });
     
     $('.play-btn').click(function(){
-        SwiperiFrames.autoplay.start();
+        SwiperIOS.autoplay.start();
+        $('.play-btn').css('opacity','0');
+    });
+
+    var SwiperAndroid = new Swiper('.swp-Android', {
+        effect: 'fade',
+        loop: true,
+        spaceBetween: 30,
+        followFinger: true,
+        speed: 500,
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        },
+        on: {
+            reachEnd: () => {
+                (SwiperAndroid).autoplay.stop();
+                $('.play-btn').css('opacity','9')
+            }
+        }
+    });
+    
+    $('.play-btn').click(function(){
+        SwiperAndroid.autoplay.start();
         $('.play-btn').css('opacity','0');
     });
 
@@ -128,7 +108,7 @@ $(window).on("load", function() {
     $('.render-android img:nth-of-type(3)').addClass('animated fadeInDown delay-2s');
 
     $('.swiper-container-iframes').addClass('animated fadeInLeft');
-    $('.alert-iPhone').addClass('animated fadeIn delay-1s');
+    $('.alert-iPhone').addClass('animated fadeIn delay-5s');
 
     $('.render-iPhone img:nth-of-type(1)').addClass('animated fadeInLeft delay-0.99s');
     $('.render-iPhone img:nth-of-type(2)').addClass('animated fadeInRight delay-1s');
