@@ -126,7 +126,7 @@ img{
         height: 90px;
         padding: 2% 5%;
     
-        background-image: url(../images/image-onboarding-header.png);
+        background-image: url(../images/image-onboarding-header.jpg);
         background-position: center top;
         background-size: cover;
         text-align: center;
@@ -172,7 +172,7 @@ img{
         font-size: $font-h;
         font-family: $roboto;
         color: #fff;
-        margin: 0 0 4%;
+        margin: 0 0 7%;
     }
     .alert-iPhone{
         display: inline-block;
@@ -180,7 +180,7 @@ img{
         font-size: $font-p;
         color: #fff;
         font-family: $roboto;
-        margin-top: 2%;
+        margin-top: 7%;
     }
     .play-btn{
         display: inline-block;
@@ -203,6 +203,7 @@ img{
     .swiper-container-iframes{
         opacity: 0;
         position: relative;
+        display: none;
     }
 }
 

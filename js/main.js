@@ -127,7 +127,7 @@ $(window).on("load", function() {
     $('.render-android img:nth-of-type(2)').addClass('animated fadeInRight delay-1s');
     $('.render-android img:nth-of-type(3)').addClass('animated fadeInDown delay-2s');
 
-    $('.swiper-container-iframes').addClass('animated fadeInUp');
+    $('.swiper-container-iframes').addClass('animated fadeInLeft');
     $('.alert-iPhone').addClass('animated fadeIn delay-1s');
 
     $('.render-iPhone img:nth-of-type(1)').addClass('animated fadeInLeft delay-0.99s');
