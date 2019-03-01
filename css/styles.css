@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/* Main Styles - Generic */
+/*---------------------------------------------------*/
+/* Colores */
+/*---------------------------------------------------
+============ Main - Proyecto ============
+
+* Nombre del proyecto: Onboarding App Davivienda
+* Nombre del archivo: Style.css
+* Descripción: _____
+* Autor: Cristian David Arias
+---------------------------------------------------*/
+/* Main Styles - Generic */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none; }
+
+body {
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  font-size: 0;
+  box-sizing: border-box;
+  background-color: #000; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: normal;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+  font-family: sans-serif, Arial, Arial-Narrow; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block; }
+  a:hover, a:focus {
+    text-decoration: none; }
+
+ol, ul {
+  list-style: none; }
+
+img {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+.cont-main-app {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 850px;
+  position: relative;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 0;
+  box-sizing: border-box;
+  background-color: #222; }
+
+.landscape-alert {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000e8; }
+  .landscape-alert img {
+    display: inline-block;
+    width: 50%;
+    max-width: 170px; }
+  .landscape-alert span {
+    font-size: 17px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300; }
+
+.on-boarding {
+  display: inline-block;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top; }
+  .on-boarding.on-boarding-home {
+    background-image: url(../images/image-onboarding-background-main.jpg); }
+  .on-boarding .header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    padding: 2% 5%;
+    background-image: url(../images/image-onboarding-header.png);
+    background-position: center top;
+    background-size: cover;
+    text-align: center; }
+    .on-boarding .header img {
+      display: inline-block;
+      width: 50%;
+      max-width: 65px;
+      min-width: 30px; }
+    .on-boarding .header span {
+      display: block;
+      width: 90%;
+      font-size: 30px;
+      color: #fff;
+      font-family: "Roboto Condensed", sans-serif;
+      line-height: 1;
+      font-weight: 900;
+      position: relative;
+      padding-left: 15px; }
+      .on-boarding .header span::after {
+        content: "";
+        width: 1.5px;
+        height: 90%;
+        position: absolute;
+        left: 8%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: #fff; }
+  .on-boarding .container-phone {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 4% 1% 6%; }
+  .on-boarding h1 {
+    display: inline-block;
+    width: 60%;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    margin: 0 0 4%; }
+  .on-boarding .alert-iPhone {
+    display: inline-block;
+    width: 90%;
+    font-size: 14px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    margin-top: 2%; }
+  .on-boarding .iframe {
+    display: inline-block;
+    width: 65%;
+    max-width: 300px; }
+  .on-boarding .swiper-container-iframes {
+    opacity: 0; }
+
+/* -------------- Media Queries - Responsive -------------- */
+/* PC */
+/* Laptop */
+/* Tablet */
+/* Phablet */
+/* Mobile */
+@media (max-width: 45em) {
+  .on-boarding .header span {
+    font-size: 5.5vw; }
+  .on-boarding h1 {
+    width: 90%;
+    font-size: 5vw; } }
+/* Mobile - Landscape*/
+/* -------------- Mobile Breakpoints - Responsive -------------- */
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* ----------- iPhone X ----------- */
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* ----------- iPhone 4 and 4S ----------- */
+/*
+@media (min-width: 400px) and (min-height: 740px) {
+    .on-boarding-int{
+        .swiper-on-boarding-int{
+            img.modalLayout{
+                height: 100vh;
+            }
+        }
+    }
+}s
+
+*/
+
+/*# sourceMappingURL=styles.css.map */
