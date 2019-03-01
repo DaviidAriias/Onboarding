@@ -44,6 +44,38 @@ $( document ).ready(function() {
     DetectMobile();
     detetcOrientation();
     
+});
+
+$( window ).resize(function() {
+    DetectMobile();
+    detetcOrientation();
+    //calcHeight();
+});
+
+$(window).on("load", function() {
+    DetectMobile();
+    detetcOrientation();
+
+    //Onboarding
+    $('.render-android img:nth-of-type(1)').addClass('animated fadeInLeft delay-0.99s');
+    $('.render-android img:nth-of-type(2)').addClass('animated fadeInRight delay-1s');
+    $('.render-android img:nth-of-type(3)').addClass('animated fadeInDown delay-2s');
+
+    $('.swiper-container-iframes').addClass('animated fadeInLeft');
+    $('.alert-iPhone').addClass('animated fadeIn delay-5s');
+
+    $('.render-iPhone img:nth-of-type(1)').addClass('animated fadeInLeft delay-0.99s');
+    $('.render-iPhone img:nth-of-type(2)').addClass('animated fadeInRight delay-1s');
+    $('.render-iPhone img:nth-of-type(3)').addClass('animated fadeInDown delay-2s');
+
+    $('.btn-home').addClass('animated fadeInUp delay-2s');
+    
+    //Home Page
+    $('.home-app h1').addClass('animated fadeInDown delay-1.3s');
+    $('.home-app img').addClass('animated fadeInDown delay-1s');
+    $('.home-app span').addClass('animated fadeInUp delay-1s');
+    $('.home-app a').addClass('animated fadeInUp delay-2s');
+
     var SwiperIOS = new Swiper('.swp-IOS', {
         effect: 'fade',
         loop: true,
@@ -89,38 +121,6 @@ $( document ).ready(function() {
         SwiperAndroid.autoplay.start();
         $('.play-btn').css('opacity','0');
     });
-
-});
-
-$( window ).resize(function() {
-    DetectMobile();
-    detetcOrientation();
-    //calcHeight();
-});
-
-$(window).on("load", function() {
-    DetectMobile();
-    detetcOrientation();
-
-    //Onboarding
-    $('.render-android img:nth-of-type(1)').addClass('animated fadeInLeft delay-0.99s');
-    $('.render-android img:nth-of-type(2)').addClass('animated fadeInRight delay-1s');
-    $('.render-android img:nth-of-type(3)').addClass('animated fadeInDown delay-2s');
-
-    $('.swiper-container-iframes').addClass('animated fadeInLeft');
-    $('.alert-iPhone').addClass('animated fadeIn delay-5s');
-
-    $('.render-iPhone img:nth-of-type(1)').addClass('animated fadeInLeft delay-0.99s');
-    $('.render-iPhone img:nth-of-type(2)').addClass('animated fadeInRight delay-1s');
-    $('.render-iPhone img:nth-of-type(3)').addClass('animated fadeInDown delay-2s');
-
-    $('.btn-home').addClass('animated fadeInUp delay-2s');
-    
-    //Home Page
-    $('.home-app h1').addClass('animated fadeInDown delay-1.3s');
-    $('.home-app img').addClass('animated fadeInDown delay-1s');
-    $('.home-app span').addClass('animated fadeInUp delay-1s');
-    $('.home-app a').addClass('animated fadeInUp delay-2s');
 });
 
 $(window).scroll(function(){
