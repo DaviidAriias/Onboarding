@@ -56,73 +56,70 @@ $(window).on("load", function() {
     DetectMobile();
     detetcOrientation();
 
-    $('html,body').animate({scrollTop: 9999});
+    //Ejecución de los Swipers
+    setTimeout(function(){ 
+        $("html, body").animate({ scrollTop: 150}, 1000);
+    }, 1000);
+
+    setTimeout(function(){ 
+        swipersMobile();
+    }, 1400);
+
 
     //Onboarding
-    $('.render-android img:nth-of-type(1)').addClass('animated fadeInLeft delay-0.99s');
-    $('.render-android img:nth-of-type(2)').addClass('animated fadeInRight delay-1s');
-    $('.render-android img:nth-of-type(3)').addClass('animated fadeInDown delay-2s');
-
     $('.swiper-container-iframes').addClass('animated fadeInLeft');
     $('.alert-iPhone').addClass('animated fadeIn delay-5s');
 
-    $('.render-iPhone img:nth-of-type(1)').addClass('animated fadeInLeft delay-0.99s');
-    $('.render-iPhone img:nth-of-type(2)').addClass('animated fadeInRight delay-1s');
-    $('.render-iPhone img:nth-of-type(3)').addClass('animated fadeInDown delay-2s');
 
     $('.btn-home').addClass('animated fadeInUp delay-2s');
-    
-    //Home Page
-    $('.home-app h1').addClass('animated fadeInDown delay-1.3s');
-    $('.home-app img').addClass('animated fadeInDown delay-1s');
-    $('.home-app span').addClass('animated fadeInUp delay-1s');
-    $('.home-app a').addClass('animated fadeInUp delay-2s');
 
-    var SwiperIOS = new Swiper('.swp-IOS', {
-        effect: 'fade',
-        loop: true,
-        spaceBetween: 30,
-        followFinger: true,
-        speed: 500,
-        autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-        },
-        on: {
-            reachEnd: () => {
-                (SwiperIOS).autoplay.stop();
-                $('.play-ios').css('opacity','9')
+    function swipersMobile(){
+        var SwiperIOS = new Swiper('.swp-IOS', {
+            effect: 'fade',
+            loop: true,
+            spaceBetween: 30,
+            followFinger: true,
+            speed: 500,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            on: {
+                reachEnd: () => {
+                    (SwiperIOS).autoplay.stop();
+                    $('.play-ios').css('opacity','9')
+                }
             }
-        }
-    });
+        });
+        
+        $('.play-btn').click(function(){
+            SwiperIOS.autoplay.start();
+            $('.play-btn').css('opacity','0');
+        });
     
-    $('.play-btn').click(function(){
-        SwiperIOS.autoplay.start();
-        $('.play-btn').css('opacity','0');
-    });
-
-    var SwiperAndroid = new Swiper('.swp-Android', {
-        effect: 'fade',
-        loop: true,
-        spaceBetween: 30,
-        followFinger: true,
-        speed: 500,
-        autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-        },
-        on: {
-            reachEnd: () => {
-                (SwiperAndroid).autoplay.stop();
-                $('.play-android').css('opacity','9')
+        var SwiperAndroid = new Swiper('.swp-Android', {
+            effect: 'fade',
+            loop: true,
+            spaceBetween: 30,
+            followFinger: true,
+            speed: 500,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },  
+            on: {
+                reachEnd: () => {
+                    (SwiperAndroid).autoplay.stop();
+                    $('.play-android').css('opacity','9')
+                }
             }
-        }
-    });
-    
-    $('.play-btn').click(function(){
-        SwiperAndroid.autoplay.start();
-        $('.play-btn').css('opacity','0');
-    });
+        });
+        
+        $('.play-btn').click(function(){
+            SwiperAndroid.autoplay.start();
+            $('.play-btn').css('opacity','0');
+        });
+    }
 
 
 });
