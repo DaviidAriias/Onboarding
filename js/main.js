@@ -56,6 +56,8 @@ $(window).on("load", function() {
     DetectMobile();
     detetcOrientation();
 
+    $('html,body').animate({scrollTop: 9999});
+
     //Onboarding
     $('.render-android img:nth-of-type(1)').addClass('animated fadeInLeft delay-0.99s');
     $('.render-android img:nth-of-type(2)').addClass('animated fadeInRight delay-1s');
@@ -121,6 +123,8 @@ $(window).on("load", function() {
         SwiperAndroid.autoplay.start();
         $('.play-btn').css('opacity','0');
     });
+
+
 });
 
 $(window).scroll(function(){
