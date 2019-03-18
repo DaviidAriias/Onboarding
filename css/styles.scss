@@ -207,5 +207,66 @@ img{
     }
 }
 
+.home-app{
+    @extend .on-boarding;
+    background-image: url(../images/image-onboarding-background-main.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    h1{
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        line-height: .5;
+
+        font-family: $roboto;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 3.5rem !important;
+        color: #fff;
+        strong{
+            display: inline-block;
+            width: 100%;
+
+            font-size: 1.6rem;
+            line-height: 0;
+            font-family: $roboto;
+            font-weight: lighter;
+        }
+    }
+    img{
+        display: inline-block;
+        width: 45%;
+        max-width: 170px;
+        margin: 18% 0;
+    }
+    span{
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+
+        font-size: 1.5rem;
+        line-height: 1;
+        font-family: $roboto;
+        font-weight: lighter;
+    }
+    a{
+        font-size: $font-p + 3;
+        display: inline-block;
+        width: auto;
+        padding: 8px 35px;
+        color: #fff;
+
+        margin-top: 20%;
+        background-color: $rojo;
+        border-radius: 5px;
+
+        margin-bottom: 5%;
+    }
+}
 
 @import 'breakpoints.scss';

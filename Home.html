@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="https://www.davivienda.com/PersonasDaviviendaNewTheme/images/faviconDav.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="js/utils/AnimateCSS/animate.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title> App inversiones | Davivienda S.A. </title>
+</head>
+
+<body style="overflow-y: auto;">
+    <div class="cont-main-app">
+        <div class="home-app">
+            <h1>
+                Bienvenido
+                <strong>a Inversiones Davivienda</strong>
+            </h1>
+
+            <img src="images/image-onboarding-icon-big.png" alt="App Inversiones">
+
+            <span>Conozca lo nuevo que tenemos <br> para usted.</span>
+
+            <!--<a href="Onboarding-App-interna.html">Continuar</a>-->
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/utils/SwiperJS/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        //El siguiente Script aydua a que no afecte el scroll cuando el dispositivo este en landscape.
+        function detetcOrientation() {
+            if (window.innerHeight > window.innerWidth) {
+                $('body').css('overflow-y','auto');
+            } else {
+                $('body').css('overflow-y','auto');
+            }
+        }
+    </script>
+</body>
+
+</html>

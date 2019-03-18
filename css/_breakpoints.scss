@@ -32,6 +32,24 @@
             font-size: 5vw;
         }
     }
+
+        .home-app{
+        h1{
+            font-size: 2.5rem;
+            strong{
+                font-size: 1.2rem;
+            }
+        }
+        img{
+            width: 35%;
+        }
+        span{
+            font-size: 1.2rem;
+        }
+        a{
+            font-size: $font-p;
+        }
+    }
 }
 
 /* Mobile - Landscape*/
