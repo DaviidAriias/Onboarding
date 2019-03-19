@@ -58,7 +58,7 @@ $(window).on("load", function() {
 
     //Ejecución de los Swipers
     setTimeout(function(){ 
-        $("html, body").animate({ scrollTop: 150}, 1000);
+        //$("html, body").animate({ scrollTop: 150}, 1000);
     }, 1000);
 
     setTimeout(function(){ 

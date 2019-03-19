@@ -165,6 +165,35 @@ img{
         width: 100%;
         text-align: center;
         padding: 4% 1% 6%;
+
+        //New OnBoarding
+        .device{
+            display: inline-block;
+            width: 80%;
+            border-radius: 10px;
+        }
+        h2{
+            font-size: $font-p + 4;
+            font-family: $roboto;
+            font-weight: bold;
+            color: #fff;
+
+            display: inline-block;
+            width: 80%;
+            margin-top: 3%;
+        }
+        span.caption{
+            font-size: $font-p + 2;
+            font-family: $roboto;
+            color: #fff;
+    
+            display: inline-block;
+            width: 80%;
+            margin: 1% 0 3%;
+            strong{
+                font-weight: bold;
+            }
+        }
     }
     h1{
         display: inline-block;

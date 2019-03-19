@@ -139,6 +139,27 @@ img {
     width: 100%;
     text-align: center;
     padding: 4% 1% 6%; }
+    .on-boarding .container-phone .device, .home-app .container-phone .device {
+      display: inline-block;
+      width: 80%;
+      border-radius: 10px; }
+    .on-boarding .container-phone h2, .home-app .container-phone h2 {
+      font-size: 18px;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      color: #fff;
+      display: inline-block;
+      width: 80%;
+      margin-top: 3%; }
+    .on-boarding .container-phone span.caption, .home-app .container-phone span.caption {
+      font-size: 16px;
+      font-family: "Roboto", sans-serif;
+      color: #fff;
+      display: inline-block;
+      width: 80%;
+      margin: 1% 0 3%; }
+      .on-boarding .container-phone span.caption strong, .home-app .container-phone span.caption strong {
+        font-weight: bold; }
   .on-boarding h1, .home-app h1 {
     display: inline-block;
     width: 60%;
