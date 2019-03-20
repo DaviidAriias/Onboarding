@@ -173,6 +173,17 @@ img{
             border-radius: 10px;
             margin-bottom: 8%;
         }
+        /*.box{
+            display: inline-block;
+            width: 80%;
+            border-radius: 10px;
+            background-color: #f8f8f8;
+            padding: 5%;
+            margin-bottom: 10%;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }*/
         h2{
             font-size: $font-p + 8;
             font-family: $roboto;
@@ -181,7 +192,6 @@ img{
 
             display: inline-block;
             width: 80%;
-            margin-top: 3%;
         }
         span.caption{
             font-size: $font-p + 2;
