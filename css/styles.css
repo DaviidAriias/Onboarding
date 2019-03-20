@@ -171,6 +171,8 @@ img {
       margin: 1% 0 2%; }
       .on-boarding .container-phone span.caption strong, .home-app .container-phone span.caption strong {
         font-weight: bold; }
+      .on-boarding .container-phone span.caption i, .home-app .container-phone span.caption i {
+        font-size: 14px; }
     .on-boarding .container-phone hr, .home-app .container-phone hr {
       display: inline-block;
       width: 60%;
