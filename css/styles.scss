@@ -170,8 +170,12 @@ img{
         .device{
             display: inline-block;
             width: 80%;
+            max-width: 310px;
             border-radius: 10px;
-            margin-bottom: 8%;
+            margin-bottom: 15%;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
         }
         /*.box{
             display: inline-block;
@@ -192,6 +196,9 @@ img{
 
             display: inline-block;
             width: 80%;
+            &:first-of-type{
+                margin-top: 6%;
+            }
         }
         span.caption{
             font-size: $font-p + 2;
@@ -200,7 +207,7 @@ img{
     
             display: inline-block;
             width: 90%;
-            margin: 1% 0 2%;
+            margin: 0 0 4%;
             strong{
                 font-weight: bold;
             }

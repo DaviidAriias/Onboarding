@@ -153,8 +153,11 @@ img {
     .on-boarding .container-phone .device, .home-app .container-phone .device {
       display: inline-block;
       width: 80%;
+      max-width: 310px;
       border-radius: 10px;
-      margin-bottom: 8%; }
+      margin-bottom: 15%; }
+      .on-boarding .container-phone .device:last-of-type, .home-app .container-phone .device:last-of-type {
+        margin-bottom: 0; }
     .on-boarding .container-phone h2, .home-app .container-phone h2 {
       font-size: 22px;
       font-family: "Roboto", sans-serif;
@@ -162,13 +165,15 @@ img {
       color: #fff;
       display: inline-block;
       width: 80%; }
+      .on-boarding .container-phone h2:first-of-type, .home-app .container-phone h2:first-of-type {
+        margin-top: 6%; }
     .on-boarding .container-phone span.caption, .home-app .container-phone span.caption {
       font-size: 16px;
       font-family: "Roboto", sans-serif;
       color: #fff;
       display: inline-block;
       width: 90%;
-      margin: 1% 0 2%; }
+      margin: 0 0 4%; }
       .on-boarding .container-phone span.caption strong, .home-app .container-phone span.caption strong {
         font-weight: bold; }
       .on-boarding .container-phone span.caption i, .home-app .container-phone span.caption i {
