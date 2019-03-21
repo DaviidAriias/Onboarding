@@ -3,7 +3,6 @@
   "short_name": "Inversiones",
   "description": "Inversiones Davivienda - Test de prueba.",
   "version": "1.0",
-  "start_url": "/index.html",
   "manifest_version": 1,
   "background_color": "#dd141d",
   "theme_color": "#dd141d",
