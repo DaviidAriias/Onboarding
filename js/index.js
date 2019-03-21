@@ -34,3 +34,5 @@ window.addEventListener('beforeinstallprompt', (e) => {
         });
     });
 });
+
+self.addEventListener('fetch', function(event) {});
