@@ -1,0 +1,14 @@
+{
+  "name": "Inversiones Davivienda",
+  "short_name": "Inversiones",
+  "description": "Inversiones Davivienda - Test de prueba.",
+  "version": "1.0",
+  "manifest_version": 1,
+  "icons":{"128":"icon_128.png"},"app":{"urls":["https://www.mindmup.com/"],"launch":{"web_url":"https://www.mindmup.com/"}},
+  "background_color": "#dd141d",
+  "theme_color": "#dd141d",
+  "display": "standalone",
+  "permissions": [
+    "unlimitedStorage"
+  ]
+}
