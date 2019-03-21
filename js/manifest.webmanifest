@@ -10,5 +10,6 @@
     }
   ],
   "name": "Inversiones Davivienda",
-  "short_name": "Inversiones"
+  "short_name": "Inversiones",
+  "start_url": "/Onboarding/index.html"
 }
