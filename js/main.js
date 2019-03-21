@@ -1,13 +1,13 @@
-function DetectMobile(){
+function DetectMobile() {
     var iPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
     var Android = /android/i.test(navigator.userAgent.toLowerCase());
-    if (iPhone){
+    if (iPhone) {
         //console.log('iOS');
         $('.render-iPhone').show();
         $('.render-android').hide();
         $('.alert-iPhone').show();
     }
-    else if (Android){
+    else if (Android) {
         //console.log('Android');
         $('.render-iPhone').hide();
         $('.render-android').show();
@@ -15,53 +15,53 @@ function DetectMobile(){
     }
 
 }
- 
+
 function detetcOrientation() {
     if (window.innerHeight > window.innerWidth) {
         //console.log('Portrait');
         $('.landscape-alert').hide();
-        $('body').css('overflow-y','auto');
+        $('body').css('overflow-y', 'auto');
     } else {
         //console.log('Landscape');
         $('.landscape-alert').show();
-        $('body').css('overflow-y','hidden');
+        $('body').css('overflow-y', 'hidden');
     }
 }
 
-function calcHeight(){
-    if ($(window).width() <= 250) {  
+function calcHeight() {
+    if ($(window).width() <= 250) {
         console.log("Minny");
-        $('.applayout-1').attr("src","../images/image-AppInversiones-screen1.png");
-    }else{
+        $('.applayout-1').attr("src", "../images/image-AppInversiones-screen1.png");
+    } else {
         console.log("Biggy");
-        $('.applayout-1').attr("src","../images/image-AppInversiones-screen1-Responsive.jpg");
+        $('.applayout-1').attr("src", "../images/image-AppInversiones-screen1-Responsive.jpg");
     }
 }
 
-$( document ).ready(function() {
+$(document).ready(function () {
     console.log('Window ready | JS');
 
     DetectMobile();
     detetcOrientation();
-    
+
 });
 
-$( window ).resize(function() {
+$(window).resize(function () {
     DetectMobile();
     detetcOrientation();
     //calcHeight();
 });
 
-$(window).on("load", function() {
+$(window).on("load", function () {
     DetectMobile();
     detetcOrientation();
 
     //Ejecución de los Swipers
-    setTimeout(function(){ 
+    setTimeout(function () {
         //$("html, body").animate({ scrollTop: 190}, 1000);
     }, 1000);
 
-    setTimeout(function(){ 
+    setTimeout(function () {
         swipersMobile();
     }, 1400);
 
@@ -73,7 +73,7 @@ $(window).on("load", function() {
 
     $('.btn-home').addClass('animated fadeInUp delay-2s');
 
-    function swipersMobile(){
+    function swipersMobile() {
         var SwiperIOS = new Swiper('.swp-IOS', {
             effect: 'fade',
             loop: true,
@@ -87,16 +87,16 @@ $(window).on("load", function() {
             on: {
                 reachEnd: () => {
                     (SwiperIOS).autoplay.stop();
-                    $('.play-ios').css('opacity','9')
+                    $('.play-ios').css('opacity', '9')
                 }
             }
         });
-        
-        $('.play-btn').click(function(){
+
+        $('.play-btn').click(function () {
             SwiperIOS.autoplay.start();
-            $('.play-btn').css('opacity','0');
+            $('.play-btn').css('opacity', '0');
         });
-    
+
         var SwiperAndroid = new Swiper('.swp-Android', {
             effect: 'fade',
             loop: true,
@@ -106,41 +106,51 @@ $(window).on("load", function() {
             autoplay: {
                 delay: 1000,
                 disableOnInteraction: false,
-            },  
+            },
             on: {
                 reachEnd: () => {
                     (SwiperAndroid).autoplay.stop();
-                    $('.play-android').css('opacity','9')
+                    $('.play-android').css('opacity', '9')
                 }
             }
         });
-        
-        $('.play-btn').click(function(){
+
+        $('.play-btn').click(function () {
             SwiperAndroid.autoplay.start();
-            $('.play-btn').css('opacity','0');
+            $('.play-btn').css('opacity', '0');
         });
     }
 
-    window.addEventListener('beforeinstallprompt', function(e) {
-        // beforeinstallprompt Event fired
-    
-        // e.userChoice will return a Promise.
-        // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
-        e.userChoice.then(function(choiceResult) {
-    
-        console.log(choiceResult.outcome);
-    
-        if(choiceResult.outcome == 'dismissed') {
-            console.log('User cancelled home screen install');
-        }
-        else {
-            console.log('User added to home screen');
-        }
+
+    var deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (event) => {
+        // Prevent Chrome <= 67 from automatically showing the prompt
+        event.preventDefault();
+        // Stash the event so it can be triggered later.
+        installPromptEvent = event;
+        // Update the install UI to notify the user app can be installed
+        document.querySelector('#install-button').disabled = false;
+      });
+
+      btnInstall.addEventListener('click', () => {
+        // Update the install UI to remove the install button
+        document.querySelector('#install-button').disabled = true;
+        // Show the modal add to home screen dialog
+        installPromptEvent.prompt();
+        // Wait for the user to respond to the prompt
+        installPromptEvent.userChoice.then((choice) => {
+          if (choice.outcome === 'accepted') {
+            console.log('User accepted the A2HS prompt');
+          } else {
+            console.log('User dismissed the A2HS prompt');
+          }
+          // Clear the saved prompt since it can't be used again
+          installPromptEvent = null;
         });
-    });
+      });
 
 });
 
-$(window).scroll(function(){
+$(window).scroll(function () {
 
 }); 
