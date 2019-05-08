@@ -64,18 +64,6 @@ img {
   box-sizing: border-box;
   background-color: #222; }
 
-.add-button {
-  display: inline-block;
-  width: 100%;
-  height: 50px;
-  background-color: #fff;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif; }
-
 .landscape-alert {
   display: flex;
   align-items: center;
@@ -165,11 +153,8 @@ img {
     .on-boarding .container-phone .device, .home-app .container-phone .device {
       display: inline-block;
       width: 80%;
-      max-width: 310px;
       border-radius: 10px;
-      margin-bottom: 15%; }
-      .on-boarding .container-phone .device:last-of-type, .home-app .container-phone .device:last-of-type {
-        margin-bottom: 0; }
+      margin-bottom: 8%; }
     .on-boarding .container-phone h2, .home-app .container-phone h2 {
       font-size: 22px;
       font-family: "Roboto", sans-serif;
@@ -177,15 +162,13 @@ img {
       color: #fff;
       display: inline-block;
       width: 80%; }
-      .on-boarding .container-phone h2:first-of-type, .home-app .container-phone h2:first-of-type {
-        margin-top: 6%; }
     .on-boarding .container-phone span.caption, .home-app .container-phone span.caption {
       font-size: 16px;
       font-family: "Roboto", sans-serif;
       color: #fff;
       display: inline-block;
       width: 90%;
-      margin: 0 0 4%; }
+      margin: 1% 0 2%; }
       .on-boarding .container-phone span.caption strong, .home-app .container-phone span.caption strong {
         font-weight: bold; }
       .on-boarding .container-phone span.caption i, .home-app .container-phone span.caption i {
@@ -289,7 +272,7 @@ img {
     font-size: 5.5vw; }
   .on-boarding h1, .home-app h1 {
     width: 90%;
-    font-size: 5vw; }
+    font-size: 4.8vw; }
 
   .home-app h1 {
     font-size: 2.5rem; }

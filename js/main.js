@@ -1,13 +1,13 @@
-function DetectMobile() {
+function DetectMobile(){
     var iPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
     var Android = /android/i.test(navigator.userAgent.toLowerCase());
-    if (iPhone) {
+    if (iPhone){
         //console.log('iOS');
         $('.render-iPhone').show();
         $('.render-android').hide();
         $('.alert-iPhone').show();
     }
-    else if (Android) {
+    else if (Android){
         //console.log('Android');
         $('.render-iPhone').hide();
         $('.render-android').show();
@@ -15,53 +15,53 @@ function DetectMobile() {
     }
 
 }
-
+ 
 function detetcOrientation() {
     if (window.innerHeight > window.innerWidth) {
         //console.log('Portrait');
         $('.landscape-alert').hide();
-        $('body').css('overflow-y', 'auto');
+        $('body').css('overflow-y','auto');
     } else {
         //console.log('Landscape');
         $('.landscape-alert').show();
-        $('body').css('overflow-y', 'hidden');
+        $('body').css('overflow-y','hidden');
     }
 }
 
-function calcHeight() {
-    if ($(window).width() <= 250) {
+function calcHeight(){
+    if ($(window).width() <= 250) {  
         console.log("Minny");
-        $('.applayout-1').attr("src", "../images/image-AppInversiones-screen1.png");
-    } else {
+        $('.applayout-1').attr("src","../images/image-AppInversiones-screen1.png");
+    }else{
         console.log("Biggy");
-        $('.applayout-1').attr("src", "../images/image-AppInversiones-screen1-Responsive.jpg");
+        $('.applayout-1').attr("src","../images/image-AppInversiones-screen1-Responsive.jpg");
     }
 }
 
-$(document).ready(function () {
+$( document ).ready(function() {
     console.log('Window ready | JS');
 
     DetectMobile();
     detetcOrientation();
-
+    
 });
 
-$(window).resize(function () {
+$( window ).resize(function() {
     DetectMobile();
     detetcOrientation();
     //calcHeight();
 });
 
-$(window).on("load", function () {
+$(window).on("load", function() {
     DetectMobile();
     detetcOrientation();
 
     //Ejecución de los Swipers
-    setTimeout(function () {
+    setTimeout(function(){ 
         //$("html, body").animate({ scrollTop: 190}, 1000);
     }, 1000);
 
-    setTimeout(function () {
+    setTimeout(function(){ 
         swipersMobile();
     }, 1400);
 
@@ -73,7 +73,7 @@ $(window).on("load", function () {
 
     $('.btn-home').addClass('animated fadeInUp delay-2s');
 
-    function swipersMobile() {
+    function swipersMobile(){
         var SwiperIOS = new Swiper('.swp-IOS', {
             effect: 'fade',
             loop: true,
@@ -87,16 +87,16 @@ $(window).on("load", function () {
             on: {
                 reachEnd: () => {
                     (SwiperIOS).autoplay.stop();
-                    $('.play-ios').css('opacity', '9')
+                    $('.play-ios').css('opacity','9')
                 }
             }
         });
-
-        $('.play-btn').click(function () {
+        
+        $('.play-btn').click(function(){
             SwiperIOS.autoplay.start();
-            $('.play-btn').css('opacity', '0');
+            $('.play-btn').css('opacity','0');
         });
-
+    
         var SwiperAndroid = new Swiper('.swp-Android', {
             effect: 'fade',
             loop: true,
@@ -106,23 +106,24 @@ $(window).on("load", function () {
             autoplay: {
                 delay: 1000,
                 disableOnInteraction: false,
-            },
+            },  
             on: {
                 reachEnd: () => {
                     (SwiperAndroid).autoplay.stop();
-                    $('.play-android').css('opacity', '9')
+                    $('.play-android').css('opacity','9')
                 }
             }
         });
-
-        $('.play-btn').click(function () {
+        
+        $('.play-btn').click(function(){
             SwiperAndroid.autoplay.start();
-            $('.play-btn').css('opacity', '0');
+            $('.play-btn').css('opacity','0');
         });
     }
 
+
 });
 
-$(window).scroll(function () {
+$(window).scroll(function(){
 
 }); 
